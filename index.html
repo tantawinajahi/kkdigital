@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dayang & Qurtubi - Wedding Invitation</title>
+  
+  <!-- Google Fonts: Playfair Display for elegant headings, Montserrat for clean body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Masukkan ini di dalam <head> index.html anda -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+  <!-- DOOR OVERLAY / COVER SCREEN -->
+  <div id="door-overlay" class="door-overlay">
+    <div class="door door-left"></div>
+    <div class="door door-right"></div>
+    
+    <div class="door-content">
+      <p class="welcome-text">UNDANGAN KE MAJLIS WALIMATUL URUS</p>
+      <h2 id="door-couple-names" class="door-names">Dayang & Qurtubi</h2>
+      <button id="open-door-btn" class="door-knob-btn">
+        <span class="icon">❤️</span>
+        <span>Buka Undangan</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <p class="sub-title">Barakkallahu Lakuma</p>
+      <h1 id="couple-names">Loading...</h1>
+      <p id="wedding-date" class="date">Loading...</p>
+      
+      <!-- Countdown Timer -->
+      <div id="countdown" class="countdown-container">
+        <div class="time-box"><span id="days">00</span><p>Days</p></div>
+        <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
+        <div class="time-box"><span id="minutes">00</span><p>Mins</p></div>
+        <div class="time-box"><span id="seconds">00</span><p>Secs</p></div>
+      </div>
+      
+      <a href="#rsvp" class="btn">RSVP Now</a>
+    </div>
+  </header>
+
+  <!-- EVENT DETAILS -->
+  <section class="section details-section">
+    <h2 class="section-title">The Wedding Details</h2>
+    <div class="details-grid">
+      <div class="detail-card">
+        <h3>Walimatul Urus</h3>
+        <p id="ceremony-time" class="time">Loading...</p>
+        <p><strong id="ceremony-venue">Loading...</strong></p>
+        <p id="ceremony-address">Loading...</p>
+        <a id="ceremony-map" href="#" target="_blank" class="btn-outline">Open Google Maps</a>
+      </div>
+      <div class="detail-card">
+        <h3>Dinner Reception</h3>
+        <p id="reception-time" class="time">Loading...</p>
+        <p><strong id="reception-venue">Loading...</strong></p>
+        <p id="reception-address">Loading...</p>
+        <a id="reception-map" href="#" target="_blank" class="btn-outline">Open Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP FORM -->
+  <section id="rsvp" class="section rsvp-section">
+    <div class="form-container">
+      <h2 class="section-title">RSVP</h2>
+      <p class="section-subtitle">Please respond by October 20, 2027</p>
+      
+      <!-- REPLACE 'your_formspree_id' WITH YOUR FORMSPREE ENDPOINT -->
+      <form action="https://formspree.io/f/your_formspree_id" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required placeholder="e.g. Jane Doe" />
+        </div>
+        
+        <div class="form-group">
+          <label for="attendance">Will you attend?</label>
+          <select id="attendance" name="attendance" required>
+            <option value="Joyfully Accepts">Joyfully Accepts</option>
+            <option value="Regretfully Declines">Regretfully Declines</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="guests">Number of Guests</label>
+          <input type="number" id="guests" name="guests" min="1" max="5" value="1" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message for the Couple</label>
+          <textarea id="message" name="message" rows="4" placeholder="Warm wishes..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-full">Send Response</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- GIFT REGISTRY / ANG PAO QR -->
+  <section class="section gift-section">
+    <h2 class="section-title">Wedding Gift</h2>
+    <p>Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, a monetary contribution towards our future would be warmly appreciated.</p>
+    <div class="qr-box">
+      <!-- Replace with client's actual Bank/Payment QR Code -->
+      <img id="qr-image" src="" alt="Payment QR Code" />
+      <p class="bank-details">
+        <strong>Bank Name:</strong> <span id="bank-name">Loading...</span><br>
+        <strong>Account No:</strong> <span id="account-no">Loading...</span>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Crafted with ♥ for Sarah & John</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!-- TAMBAHKAN KOD AUDIO INI DI DALAM HTML ANDA -->
+  <audio id="wedding-audio" loop></audio>
+  <button id="music-toggle-btn" class="music-float-btn">
+    <span id="music-icon">🎵</span> <span id="music-text">Play Music</span>
+  </button>
+
+  <!-- FLOATING BOTTOM NAVIGATION BAR -->
+  <div class="nav__menu animated fadeInUp" id="nav-menu">
+      <ul class="nav__list">
+          <li class="nav__item">
+              <a href="#rsvp" class="nav__link">
+                  <i class="bx bx-receipt nav__icon"></i>
+                  <span class="nav__name">RSVP</span>
+              </a>
+          </li>          
+
+          <li class="nav__item">
+              <a href="#gift" class="nav__link">
+                  <i class="bx bx-money-withdraw nav__icon"></i>
+                  <span class="nav__name">Money Gift</span>
+              </a>
+          </li>
+          
+          <li class="nav__item">
+              <a href="#details" class="nav__link">
+                  <i class="bx bx-map-pin nav__icon"></i>
+                  <span class="nav__name">Location</span>
+              </a>
+          </li>
+
+          <li class="nav__item">
+              <a href="#calendar" class="nav__link">
+                  <i class="bx bx-calendar nav__icon"></i>
+                  <span class="nav__name">Calendar</span>
+              </a>
+          </li>
+      </ul>
+  </div>
+
+</body>
+</html>

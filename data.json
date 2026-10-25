@@ -1,0 +1,24 @@
+{
+  "brideName": "Dayang",
+  "groomName": "Qurtubi",
+  "weddingDate": "Januari 23, 2027 10:00:00",
+  "formattedDate": "Sabtu, Januari 23, 2027",
+  "musicUrl": "Dayang.mp3",
+  "ceremony": {
+    "time": "10:00 AM – 12:00 PM",
+    "venue": "Boathouse By The Lake",
+    "address": "Tasik Ampang, 5, Jalan Hulu Kelang, Kampung Berembang, 68000 Ampang Jaya, Selangor",
+    "mapLink": "https://maps.app.goo.gl/35TKtvmvaxRPepyb7"
+  },
+  "reception": {
+    "time": "6:30 PM – 10:00 PM",
+    "venue": "Boathouse By The Lake",
+    "address": "Tasik Ampang, 5, Jalan Hulu Kelang, Kampung Berembang, 68000 Ampang Jaya, Selangor",
+    "mapLink": "https://maps.app.goo.gl/35TKtvmvaxRPepyb7"
+  },
+  "bankDetails": {
+    "bankName": "Maybank Bank",
+    "accountNo": "1234-5678-9012",
+    "qrImage": "https://via.placeholder.com/200?text=Payment+QR"
+  }
+}
